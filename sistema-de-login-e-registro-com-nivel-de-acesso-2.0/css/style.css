@@ -1,0 +1,118 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #1c1c1c;
+    color: #fafafa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+/* formulario */
+div#box-form{
+    display: block;
+    width: 37%;
+    height: 165px;
+    margin: 0 auto;
+    border-left: 2px solid red;
+    padding: 5px;
+    margin-top: 20%;
+}
+form#form span{
+    display: block;
+}
+form#form #email ,#senha, #nome{
+    width: 98.5%;
+    height: 30px;
+    margin-top: 5px;
+    padding-left: 4px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #296A1E;
+    outline: none;
+}
+form#form #custon-buttom{
+    display: block;
+    margin-top: 5px;
+    border: none;
+    background-color: rgb(223, 10, 10);
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+form#form #custon-buttom:hover{
+    background-color: rgb(206, 25, 25);
+}
+form#form #registro a{
+    position: relative;
+    top: -30px;
+    text-decoration: none;
+    color: #fafafa;
+    float: right;
+}
+form#form #registro a:hover{
+    color: aliceblue;
+}
+
+/* restrito */
+div#infor{
+    border: 1px solid red;
+    padding: 5px;
+}
+h1{
+    text-align: center;
+    color: red;
+}
+h2{
+    margin-left: 10px;
+}
+h3{
+    float: right;
+    position: relative;
+    top: -20px;
+    margin-right: 10px;
+}
+span#sair a{
+    float: right;
+    text-decoration: none;
+    color: #fafafa;
+    font-size: 20px;
+    background-color: #2e2e2e;
+    padding: 10px 20px 15px;
+    border-radius: 5px;
+    margin-right: 10px; 
+}
+span#sair a:hover{
+   background-color: #585858;
+   transition: all 0.5s;
+}
+/* registrar-se */
+div#box-form-registro{
+    display: block;
+    width: 40%;
+    height: 255px;
+    margin: 0 auto;
+    border-left: 2px solid red;
+    padding: 5px;
+    margin-top: 20%;
+}
+div#box-form-registro .msg_serv_positiva{
+    background-color: #01DF01;
+    padding: 5px;
+    text-align: center;
+    font-size: 17px;
+    border-radius: 10px;
+    color: white;
+}
+div#box-form-registro .msg_serv_negative ,div#box-form .msg_serv_negative{
+    background-color: red;
+    padding: 5px;
+    text-align: center;
+    font-size: 17px;
+    border-radius: 10px;
+    color: #fafafa;
+}
