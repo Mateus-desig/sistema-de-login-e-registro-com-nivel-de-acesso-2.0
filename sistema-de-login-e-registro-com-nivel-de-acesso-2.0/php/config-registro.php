@@ -15,9 +15,9 @@
     $senhaSegura = password_hash($senha, PASSWORD_BCRYPT);
 
     //Pegar registro do banco de dados
-    $registro = $conn->query("SELECT email FROM login_tb");
+    $registro = $conn->query("SELECT * FROM login_tb WHERE email = '$email'");
     //verificar se o registro existe
-    if(mysqli_num_rows($registro) >= 1){
+    if(mysqli_num_rows($registro) == 1){
         $_SESSION['msg'] = "<div class='msg_serv_negative'><p>Este email ja esta registrado!</p></div>";
         header("Location: ../registrar.php");
     }else{
@@ -26,30 +26,3 @@
         $_SESSION['msg'] = "<div class='msg_serv_positiva'><p>Registro enviado com sucesso faça login!</p></div>";
         header("Location: ../registrar.php");
     }
-
-
-
-
-
-
-
-    // $verifi = "SELECT * FROM login_tb";
-    // $result = mysqli_query($conn, $verifi);
-
-    // if(mysqli_query($conn, $insert)){
-
-    //     $verifi = "SELECT * FROM login_tb";
-    //     $result = mysqli_query($conn, $verifi);
-    //     $resultado = mysqli_fetch_assoc($result);
-
-    //     if($email == $resultado['email']){
-    //         $_SESSION['msg'] = "<div class='msg_serv_negative'><p>Este email ja esta registrado!</p></div>";
-    //         header("Location: ../registrar.php");
-    //     }else{
-    //         $_SESSION['msg'] = "<div class='msg_serv_positiva'><p>Registro enviado com sucesso faça login!</p></div>";
-    //         header("Location: ../registrar.php");
-    //     }
-    // }else{
-    //     $_SESSION['msg'] = "<div class='msg_serv_negative'><p>Erro do servidor interno!</p></div>";
-    //     header("Location: ../registrar.php");
-    // }
